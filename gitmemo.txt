@@ -1,0 +1,16 @@
+(base) rico@Rikux:~$ cd calc
+(base) rico@Rikux:~/calc$ git init
+Initialized empty Git repository in /home/rico/calc/.git/
+(base) rico@Rikux:~/calc$ ls
+background.js  calc.css  calc.html  calc.js  manifest.json
+(base) rico@Rikux:~/calc$ git add *
+(base) rico@Rikux:~/calc$ git commit -m "load initial"
+[master (root-commit) 1d63bbd] load initial
+ 5 files changed, 196 insertions(+)
+ create mode 100644 background.js
+ create mode 100644 calc.css
+ create mode 100644 calc.html
+ create mode 100644 calc.js
+ create mode 100644 manifest.json
+(base) rico@Rikux:~/calc$ git remote add origin https://github.com/paparico/chromecalc.git
+(base) rico@Rikux:~/calc$ git push -u origin master

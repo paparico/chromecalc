@@ -2,6 +2,11 @@
 html,body {height:100%;  margin: 0px;}
 
 
+@font-face{ 
+font-family: 'lcd';
+src: url('alarm clock.ttf');
+}
+
 
 body { display:flex;
 	flex-direction:row;
@@ -30,6 +35,11 @@ body { display:flex;
     min-height:24px;
     max-height:128px;
     flex-grow:1;
+	font-family:lcd;
+	font-size: 8vh;
+    color: #17d5e0;
+    justify-content: flex-end;
+    align-items: flex-end;
 	}
 	
 #menu {
@@ -53,7 +63,6 @@ body { display:flex;
 	}
 	
 #func {
-	background-color:#8080f0;
 	flex-basis:30%;
 	}
 	

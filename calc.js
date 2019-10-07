@@ -1,11 +1,8 @@
-function keybClicked(e) {
-    
-    }
+var state={txt:'0',val:0}
 
-function add(e) {}
-function mult(e) {}
-function divide() {}
-function result() {}
+function update_display() {
+	disp.innerText=state.txt
+	}
 
 k10=[
     [{face:'7',func:number},{face:'8',func:number},{face:'9',func:number}],
@@ -14,15 +11,10 @@ k10=[
     [{face:'+/-',func:chgSign},{face:'0',func:number},{face:'.',func:decPoint}]
     ]
 
-
-basefunc=[
-    [{face:"+",func:add,sign:1},{face:"-",func:add,sign:-1}],    
-    [{face:"x",func:mult},{face:":",func:divide}],
-    [{face:"=",func:result}]    
-    ]
-    
 function number(e) {
-    console.log(this.face)
+    if (state.txt=='0') {state.txt=''}
+	state.txt=state.txt+this.face
+	update_display()
     }
 
 
@@ -56,7 +48,7 @@ function mkKeyb(data) {
 
 window.onload = function () {
     kzone.appendChild(mkKeyb(k10))
-    kzone.appendChild(mkKeyb(basefunc))
-    kzone.children[0].id='num'
-    kzone.children[1].id='func'
+    kzone.appendChild(mkKeyb(k10))
+	kzone.children[0].id='num'
+	kzone.children[1].id='func'
     }
